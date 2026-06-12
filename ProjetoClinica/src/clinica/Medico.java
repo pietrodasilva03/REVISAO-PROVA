@@ -1,0 +1,39 @@
+package clinica;
+
+public class Medico {
+	  private String nome;
+	    private String especialidade;
+	    private double valorConsulta;
+
+	    public String getNome() {
+	        return nome;
+	    }
+
+	    public void setNome(String nome) {
+	        this.nome = nome;
+	    }
+
+	    public String getEspecialidade() {
+	        return especialidade;
+	    }
+
+	    public void setEspecialidade(String especialidade) {
+	        if (especialidade != null && !especialidade.trim().isEmpty()) {
+	            this.especialidade = especialidade;
+	        } else {
+	            System.out.println("Erro: especialidade não pode ser vazia.");
+	        }
+	    }
+
+	    public double getValorConsulta() {
+	        return valorConsulta;
+	    }
+
+	    public void setValorConsulta(double valorConsulta) {
+	        if (valorConsulta > 0) {
+	            this.valorConsulta = valorConsulta;
+	        } else {
+	            System.out.println("Erro: valor da consulta deve ser maior que zero.");
+	        }
+	    }
+	}
